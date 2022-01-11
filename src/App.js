@@ -1,15 +1,25 @@
+import {useState} from 'react'
 import './index.css';
 
-const shouldShowLanding = false;
 
 function App() {
+  
+  const [shouldShowLanding, setterFunction] = useState(true);
+  
+  const toggleText = () => {
+    console.log(shouldShowLanding);  
+    setterFunction(!shouldShowLanding);
+    console.log(shouldShowLanding);
+  }
+  
   return (
     <div className="App">
       <header className="App-header">
-        <p>
+        <div>
           Hello world!
-        </p>
-        <p>{ shouldShowLanding ? <p>Landing</p> : <p>Home</p> }</p>
+        </div>
+        <div>{shouldShowLanding ? <div>Landing page</div> : <div>Home page</div>}</div>
+        <button onClick={toggleText}>Váltás</button>
       </header>
     </div>
   );
