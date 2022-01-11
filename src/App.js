@@ -6,12 +6,6 @@ function App() {
   
   const [shouldShowLanding, setShouldShowLanding] = useState(true);
   
-  const toggleText = () => {
-    console.log(shouldShowLanding);  
-    setShouldShowLanding(!shouldShowLanding);
-    console.log(shouldShowLanding);
-  }
-  
   return (
     <div className="App">
       <header className="App-header">
@@ -19,7 +13,7 @@ function App() {
           Hello world!
         </div>
         <div>{shouldShowLanding ? <div>Landing page</div> : <div>Home page</div>}</div>
-        <button onClick={toggleText}>Váltás</button>
+        <button onClick={() => setShouldShowLanding(!shouldShowLanding)}>Váltás</button>
       </header>
     </div>
   );
