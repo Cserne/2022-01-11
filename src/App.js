@@ -4,11 +4,11 @@ import './index.css';
 
 function App() {
   
-  const [shouldShowLanding, setterFunction] = useState(true);
+  const [shouldShowLanding, setShouldShowLanding] = useState(true);
   
   const toggleText = () => {
     console.log(shouldShowLanding);  
-    setterFunction(!shouldShowLanding);
+    setShouldShowLanding(!shouldShowLanding);
     console.log(shouldShowLanding);
   }
   
