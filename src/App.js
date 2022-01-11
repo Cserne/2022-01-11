@@ -17,9 +17,14 @@ function App() {
         <button onClick={() => setpageName ("Landing")}>Contact</button>
         <div>{shouldShowLanding ? <div>Landing page</div> : <div>Home page</div>}</div>
         <button onClick={() => setShouldShowLanding(!shouldShowLanding)}>Váltás</button>
-        <div>{pageName === "Home" && <div>Homepage component</div>}</div>
-        <div>{pageName === "About" && <div>About component</div>}</div>
-        <div>{pageName === "Landing" && <div>Landing component</div>}</div>
+        <main>
+          {pageName === "Home" && <div>Homepage component</div>}
+          {pageName === "About" && <div>About component</div>}
+          {pageName === "Landing" && <div>Landing component</div>}
+        </main>
+
+        <div>{pageName !== "Landing" && <div>This is not the landing page.</div>}</div>
+        
       </header>
     </div>
   );
