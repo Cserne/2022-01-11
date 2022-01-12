@@ -44,7 +44,7 @@ function App() {
           <ColoredLine color="red" />
         </div>
 
-        <input type="text" value={myInputValue} onChange = {(e) => setMyInputValue (e.target.value)}/>
+        <input type="text" value={myInputValue} onChange={(e) => setMyInputValue (e.target.value)}/>
         
       </header>
     </div>
