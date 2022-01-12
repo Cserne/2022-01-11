@@ -7,6 +7,21 @@ function App() {
   const [pageName, setpageName] = useState("Home")
   
   const [shouldShowLanding, setShouldShowLanding] = useState(true);
+
+  const ColoredLine = ({ color }) => (
+    <hr
+      style={{
+        color,
+        backgroundColor: color,
+        height: 5
+      }}
+    />
+  );
+
+  const [myInputValue, setMyInputValue] = useState("Név");
+
+  console.log("render");
+  console.log(myInputValue);
   
   return (
     <div className="App">
@@ -24,10 +39,17 @@ function App() {
         </main>
 
         <div>{pageName !== "Landing" && <div>This is not the landing page.</div>}</div>
+
+        <div>
+          <ColoredLine color="red" />
+        </div>
+
+        <input type="text" value={myInputValue} onChange = {(e) => setMyInputValue (e.target.value)}/>
         
       </header>
     </div>
   );
 }
+
 
 export default App;
